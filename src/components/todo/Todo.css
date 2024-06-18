@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&family=Roboto:wght@400;700&display=swap');
+
+/* Loader styling */
+.loader {
+    border: 4px solid #f3f3f3;
+    /* Light grey */
+    border-top: 4px solid #ff6b6b;
+    /* Red color */
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+    margin-right: 8px;
+}
+
+/* Keyframes for spinner animation */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Button loading state */
+.make-todo-button.loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #873737;
+    cursor: not-allowed;
+}
+
+.make-todo-button.loading span {
+    margin-left: 8px;
+}
+
+.make-todo-button.hover:not(.loading) {
+    background-color: #fff;
+    color: #ff6b6b;
+    transform: scale(1.1);
+}
+
+/* 
+.hover {
+    background-color: #fff;
+    color: #ff6b6b;
+    transform: scale(1.1);
+} */
+
+/* Hover effect */
+/* .make-todo-button:not(.loading):hover {
+    background-color: #fff;
+    color: #ff6b6b;
+    transform: scale(1.1);
+} */
+
+/* Main container styling */
+.todo {
+    padding: 85px 20px;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Add Todo form styling */
+.add-todo {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.add-todo h2 {
+    font-size: 32px;
+    color: #ff6b6b;
+    margin-bottom: 20px;
+    font-family: 'Lobster', cursive;
+    animation: fadeInDown 1s ease-in-out;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.add-todo form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.add-todo input,
+.add-todo textarea {
+    width: 50%;
+    max-width: 1400px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.add-todo textarea {
+    resize: both;
+}
+
+@media (max-width: 768px) {
+
+    .add-todo input,
+    .add-todo textarea {
+        width: 100%;
+        max-width: 700px;
+        margin-bottom: 5px;
+    }
+
+    .add-todo textarea {
+        margin-bottom: 15px;
+    }
+}
+
+.make-todo-button {
+    background-color: #ff6b6b;
+    color: #fff;
+    font-variant: small-caps;
+    padding: 10px 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    outline: none;
+}
+
+button:focus {
+    outline: none;
+}
+
+/* Todo list styling */
+.todo-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.todo-list h2 {
+    font-size: 32px;
+    color: #ff6b6b;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Lobster', cursive;
+    animation: fadeInDown 1s ease-in-out;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.text-input {
+    box-shadow: #0000002d 0px 5px 15px;
+}
+
+.todo-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.todo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 18px;
+    margin-bottom: 17px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    animation: fadeIn 0.5s ease-in-out;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.todo-item:hover {
+    transform: translateY(-3px);
+}
+
+.todo-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.todo-details {
+    flex-grow: 1;
+    padding-right: 10px;
+}
+
+.todo-details h3 {
+    font-size: 22px;
+    margin: 0;
+    color: #333;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.todo-details p {
+    margin: 5px 0 0;
+    color: #666;
+    font-family: 'Roboto', sans-serif;
+    word-wrap: break-word;
+}
+
+.todo-actions {
+    display: flex;
+    flex-direction: column;
+}
+
+.action-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0px;
+    font-size: 24px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.complete-button {
+    color: #4caf50;
+}
+
+.update-button {
+    color: #ffc107;
+}
+
+.action-button:hover {
+    color: #000;
+    transform: scale(1.2);
+}
+
+/* Completed todo item styling */
+.todo-item.completed {
+    opacity: 0.6;
+    text-decoration: line-through;
+}
+
+/* No todos message styling */
+.no-todos {
+    text-align: center;
+    font-size: 24px;
+    color: #999;
+    font-family: 'Open Sans', sans-serif;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Keyframes for complete animation */
+@keyframes completeAnimation {
+    0% {
+        opacity: 1;
+        transform: translateY(0) scale(1) rotate(0deg);
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: translateY(-10px) scale(1.1) rotate(10deg);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-20px) scale(0.9) rotate(-10deg);
+    }
+}
+
+/* Completed todo item styling with animation */
+.todo-item.completed {
+    animation: completeAnimation 0.5s forwards;
+}
+
+/* Fade-out and slide-up effect for completed items */
+.todo-item.fade-out {
+    animation: completeAnimation 0.5s forwards;
+}
+
+
+
+/* Keyframes for ribbon animation */
+@keyframes ribbonAnimation {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-10px) rotate(10deg);
+    }
+
+    100% {
+        transform: translateY(-20px) rotate(-10deg);
+    }
+}
+
+/* Ribbon styles */
+.ribbon {
+    width: 100px;
+    /* Adjust width as needed */
+    height: 100px;
+    /* Adjust height as needed */
+    position: absolute;
+    top: -60px;
+    /* Adjust vertical position as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(to bottom right, #ff6b6b, #ffc107, #4caf50);
+    /* Adjust colors as needed */
+    border-radius: 50px;
+    animation: ribbonAnimation 0.5s forwards;
+}

@@ -1,0 +1,103 @@
+.signup {
+    background: linear-gradient(to bottom, #ff6b6b, #f94d6a, #f37d4c, #f2af28);
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    /* Center-align the content */
+    padding: 100px 20px;
+    height: 100vh;
+    overflow: hidden;
+    /* Add padding around the content */
+}
+
+.content1 {
+    max-width: 400px;
+    /* Set max-width for the content */
+    margin: 0 auto;
+    /* Center the content horizontally */
+    background-color: #fff;
+    /* Set background color */
+    padding: 40px;
+    /* Add padding */
+    border-radius: 10px;
+    /* Add border radius */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Add box shadow */
+}
+
+.content1 h2 {
+    margin-bottom: 20px;
+    /* Add bottom margin to the heading */
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    background-color: hwb(0 42% 0%);
+    color: #fff;
+    font-variant: small-caps;
+    padding: 6px 20px;
+    font-size: 22px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.hover {
+    background-color: hwb(0 35% 0%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    /* color: #ff6b6b; */
+    transform: scale(1.01);
+}
+
+
+
+.loader {
+    border: 4px solid #f3f3f3;
+    /* Light grey */
+    border-top: 4px solid #ff6b6b;
+    /* Red color */
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+    margin-right: 8px;
+}
+
+.loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #873737;
+    cursor: not-allowed;
+}
+
+
+/* Keyframes for spinner animation */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
