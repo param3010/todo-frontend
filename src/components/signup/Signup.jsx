@@ -34,7 +34,7 @@ export default function Signup() {
 
         try {
             const res = await axios.post(
-                "https://todo-backend-param.onrender.com/api/v1/register",
+                "https://todo-backend-param-bg33.onrender.com/api/v1/register",
                 input
             );
 
