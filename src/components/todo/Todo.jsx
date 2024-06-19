@@ -22,7 +22,7 @@ export default function Todo() {
         if (user) {
             await axios
                 .get(
-                    `https://todo-backend-param-bg33.onrender.com/api/v2/getTasks/${user}`
+                    `https://todo-backend-param.onrender.com/api/v2/getTasks/${user}`
                 )
                 .then((res) => {
                     setTodos(res.data.lists);
@@ -57,7 +57,7 @@ export default function Todo() {
                 if (user) {
                     await axios
                         .put(
-                            `https://todo-backend-param-bg33.onrender.com/api/v2/updateTask/${currentTodo._id}`,
+                            `https://todo-backend-param.onrender.com/api/v2/updateTask/${currentTodo._id}`,
                             { title, body, id: user }
                         )
                         .then((res) => {
@@ -77,7 +77,7 @@ export default function Todo() {
                 if (user) {
                     await axios
                         .post(
-                            "https://todo-backend-param-bg33.onrender.com/api/v2/addTask",
+                            "https://todo-backend-param.onrender.com/api/v2/addTask",
                             { title: title, body: body, id: user }
                         )
                         .then((res) => {
@@ -144,7 +144,7 @@ export default function Todo() {
             const user = localStorage.getItem("id");
             if (user) {
                 axios.delete(
-                    `https://todo-backend-param-bg33.onrender.com/api/v2/deleteTask/${id}`,
+                    `https://todo-backend-param.onrender.com/api/v2/deleteTask/${id}`,
                     { data: { user: user } }
                 );
             }
