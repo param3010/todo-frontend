@@ -31,16 +31,16 @@ export default function Login() {
 
     const submit = async (e) => {
         e.preventDefault();
-        
+
         if (input.email === "" || input.password === "") {
             toast.error("Please fill all the fields");
             return;
         }
-        
+
         setIsLoading(true);
         try {
             const res = await axios.post(
-                "https://todo-backend-param.onrender.com/api/v1/signin",
+                "https://todo-backend-param-bg33.onrender.com/api/v1/signin",
                 input
             );
 
@@ -58,8 +58,7 @@ export default function Login() {
             });
         } catch (error) {
             toast.error("An error occurred. Please try again.");
-        }
-        finally{
+        } finally {
             setIsLoading(false);
         }
     };
